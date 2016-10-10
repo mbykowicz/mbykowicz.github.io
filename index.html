@@ -12,6 +12,90 @@
 		<![endif]-->
     </head>
     <body>
+        <svg id="main" xmlns="http://www.w3.org/2000/svg" width="567.35" height="297.87" viewBox="0 0 567.35 297.87">
+            <defs>
+                <style>
+                    .cls-0 {
+                        fill: #dd1200;
+                    }
+
+                    .cls-1 {
+                        fill: none;
+                        stroke: #1f1f1f;
+                        stroke-miterlimit: 10;
+                        stroke-width: 25px;
+                    }
+                </style>
+            </defs>
+            <g id="group">
+                <polygon id="logo" class="cls-0" points="323.31 81.28 448.55 176.63 344.93 34.64 2.43 295.39 217.47 0.71 263.86 36.02 244.05 51.1 222.42 34.64 118.8 176.63 349.88 0.71 564.93 295.39 303.5 96.36 323.31 81.28"/>
+                <polyline id="mask" class="cls-1" points="308.63 85.19 506.74 236.01 347.4 17.67 60.61 236.01 219.94 17.67 258.39 46.94"/>
+            </g>
+        </svg>
+
+        <p>MATEUSZ BYKOWICZ</p>
+
+        <style media="screen">
+
+            body {
+                margin: 250px auto;
+                text-align: center;
+                width: 500px;
+                background: #1f1f1f;
+            }
+
+            p {
+                color: #dd1200;
+                font-weight: 700;
+                font-family: sans-serif;
+                font-size: 22px;
+                visibility: hidden;
+            }
+
+            #main {
+                width: 200px;
+                height: auto;
+                perspective: 1000px;
+                transform-origin:center;
+                animation: rot 2.5s ease-in-out;
+            }
+
+            .cls-1 {
+                stroke-dasharray: 1200 1200;
+                stroke-dashoffset: 1200;
+                animation: dash 3s ease-out;
+            }
+
+            @keyframes rot {
+                0% {
+                    opacity: 0;
+                }
+
+                25% {
+                    opacity: 0;
+                    transform: rotateX(45deg) scale(1.3);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: rotateX(0deg) scale(1);;
+                }
+            }
+
+            @keyframes dash {
+                0% {
+                    stroke-dashoffset: 0;
+                }
+
+                25% {
+                    stroke-dashoffset: 0;
+                }
+
+                100% {
+                    stroke-dashoffset: 1200;
+                }
+            }
+        </style>
 
     </body>
 </html>
