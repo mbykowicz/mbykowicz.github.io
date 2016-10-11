@@ -17,22 +17,33 @@
 
             body {
                 background-color: rgb(34, 34, 34);
+                margin: 0;
+                padding: 0;
             }
 
             .wrapper {
-                width: 480px;
-                margin: 150px auto;
+                margin: auto;
                 text-align: center;
             }
 
+            svg {
+
+                transform: scale(0.5);
+                transform-origin: center;
+
+                animation:  zoom-out 3.5s ease-in-out, fade-in 3.5s ease-in-out;
+            }
+
             .poly {
-                transform: scale(0.8);
-                fill: rgb(77, 29, 147);
+
+                fill: #fff;
+
+                stroke-width: 2;
 
                 stroke-dasharray: 2500;
                 stroke-dashoffset: 0;
 
-                animation: anim 3s ease-in-out;
+                animation: anim 3.5s ease-in-out;
             }
 
             @keyframes anim {
@@ -45,12 +56,32 @@
                     fill: rgb(34, 34, 34);
                 }
 
-                75% {
+                70% {
                     stroke-dashoffset: 0;
                 }
 
                 100% {
-                    fill: rgb(77, 29, 147);
+                    fill: #fff;
+                }
+            }
+
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes zoom-out {
+                0% {
+                    transform: scale(0.6);
+                }
+
+                100% {
+                    transform: scale(0.5);
                 }
             }
 
@@ -59,11 +90,11 @@
         </style>
 
         <div class="wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="567.35" height="297.86" viewBox="0 0 567.35 297.86">
+            <svg xmlns="http://www.w3.org/2000/svg" width="567" height="300">
                 <defs>
                     <style>
                         .poly {
-                            stroke: rgb(77, 29, 147);
+                            stroke: #fff;
                             stroke-miterlimit: 10;
                         }
                     </style>
